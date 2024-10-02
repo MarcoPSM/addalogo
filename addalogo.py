@@ -46,7 +46,7 @@ for image in [x for x in os.listdir(files_path + IN_FOLDER) ]:
 	tmp_wm = watermark.resize((int(x/5), int(y/5)))
 	photo.paste(tmp_wm, (int(x/2) - int(tmp_wm.size[0]/2), int(y/2) - tmp_wm.size[1]), tmp_wm)
 	photo = photo.convert('RGB')
-	photo.save(files_path + IN_FOLDER + '/' + image.split('.')[0] + '.jpeg', 'jpeg')
+	photo.save(files_path + OUT_FOLDER + '/' + image.split('.')[0] + '.jpeg', 'jpeg')
 	print(image, ' --- OK')
 
 
